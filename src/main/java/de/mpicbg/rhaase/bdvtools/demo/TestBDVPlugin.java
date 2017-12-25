@@ -16,7 +16,7 @@ import org.scijava.plugin.Plugin;
  * Author: Robert Haase (http://haesleinhuepf.net) at MPI CBG (http://mpi-cbg.de)
  * December 2017
  */
-@Plugin(type = BigDataViewerPlugin.class)
+//@Plugin(type = BigDataViewerPlugin.class)
 public class TestBDVPlugin implements BigDataViewerPlugin
 {
   BigDataViewer bdv;

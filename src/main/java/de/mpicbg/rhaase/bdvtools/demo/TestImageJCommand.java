@@ -16,6 +16,7 @@ import org.scijava.plugin.Plugin;
  * Author: Robert Haase (http://haesleinhuepf.net) at MPI CBG (http://mpi-cbg.de)
  * December 2017
  */
+//@Plugin(type = Command.class)
 public class TestImageJCommand implements Command
 {
   @Parameter

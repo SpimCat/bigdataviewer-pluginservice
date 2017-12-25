@@ -8,8 +8,9 @@
 		<version>9.0.0</version>
 	</parent>
 
+	<groupId>de.mpicbg.rhaase</groupId>
 	<artifactId>BigDataViewerPluginService</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 
 	<name>BigDataViewerPluginService</name>
 	<description>A plugin mechanism / server for BigDataViewer</description>
