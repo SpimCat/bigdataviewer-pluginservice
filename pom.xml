@@ -9,10 +9,10 @@
 	</parent>
 
 	<groupId>de.mpicbg.rhaase</groupId>
-	<artifactId>BigDataViewerPluginService</artifactId>
+	<artifactId>bigdataviewer-pluginservice</artifactId>
 	<version>0.2.0-SNAPSHOT</version>
 
-	<name>BigDataViewerPluginService</name>
+	<name>bigdataviewer-pluginservice</name>
 	<description>A plugin mechanism / server for BigDataViewer</description>
 	<url>https://github.com/SpimCat/bigdataviewer-pluginservice</url>
 	<inceptionYear>2017</inceptionYear>
@@ -143,4 +143,15 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+
+	<distributionManagement>
+
+			<repository>
+				<id>bintray-haesleinhuepf-snapshots</id>
+				<name>bintray</name>
+				<url>https://api.bintray.com/maven/haesleinhuepf/snapshots/bigdataviewer-pluginservice/;publish=1</url>
+			</repository>
+
+	</distributionManagement>
 </project>
