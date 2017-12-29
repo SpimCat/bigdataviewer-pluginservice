@@ -10,7 +10,7 @@
 
 	<groupId>de.mpicbg.rhaase</groupId>
 	<artifactId>bigdataviewer-pluginservice</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 
 	<name>bigdataviewer-pluginservice</name>
 	<description>A plugin mechanism / server for BigDataViewer</description>
@@ -47,12 +47,14 @@
 		</developer>
 	</developers>
 	<contributors>
-		<!--
-		NB: Need at least one element to override the parent.
-		See: https://issues.apache.org/jira/browse/MNG-5220
-		-->
 		<contributor>
-			<name>None</name>
+			<name>Benoit Lombardot</name>
+			<url>http://imagej.net/User:Benoit</url>
+			<organization>Scientific Computing Facility, MPI CBG Dresden</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<properties><id>Benoit</id></properties>
 		</contributor>
 	</contributors>
 

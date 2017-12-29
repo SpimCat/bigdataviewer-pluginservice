@@ -28,28 +28,33 @@ public class BigDataViewerPluginService extends
     return BigDataViewerPlugin.class;
   }
 
+
+  int verticalPostion = 100;
   public void injectPlugins(BigDataViewer bdv)
   {
     JMenu pluginMenu = new JMenu("Plugins");
 
     for (PluginInfo<BigDataViewerPlugin> pluginInfo : getPlugins()) {
       JMenuItem menuItem = new JMenuItem(pluginInfo.getClassName());
-      menuItem.addActionListener((actionEvent) -> {
+      try
+      {
+        BigDataViewerPlugin plugin = pluginInfo.createInstance();
+        plugin.setBdv(bdv);
+        if (plugin instanceof SupportsBigDataViewerToolBarButton) {
+          verticalPostion = ((SupportsBigDataViewerToolBarButton) plugin).addToolBarButtons(verticalPostion);
+        }
 
-        try
-        {
-          BigDataViewerPlugin plugin = pluginInfo.createInstance();
-          plugin.setBdv(bdv);
+        menuItem.addActionListener((actionEvent) -> {
           plugin.run();
-        }
-        catch (InstantiableException e)
-        {
-          e.printStackTrace();
-        }
+        });
+        pluginMenu.add(menuItem);
+      }
+      catch (InstantiableException e)
+      {
+        e.printStackTrace();
+      }
 
-      });
 
-      pluginMenu.add(menuItem);
 
     }
     bdv.getViewerFrame().getJMenuBar().add(pluginMenu);
