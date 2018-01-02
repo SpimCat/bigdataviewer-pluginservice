@@ -3,14 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>net.imglib2</groupId>
-		<artifactId>pom-imglib2</artifactId>
-		<version>9.0.0</version>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>19.0.0</version>
+		<relativePath />
 	</parent>
 
 	<groupId>de.mpicbg.rhaase</groupId>
 	<artifactId>bigdataviewer-pluginservice</artifactId>
-	<version>0.2.1</version>
+	<version>0.2.3</version>
 
 	<name>bigdataviewer-pluginservice</name>
 	<description>A plugin mechanism / server for BigDataViewer</description>
