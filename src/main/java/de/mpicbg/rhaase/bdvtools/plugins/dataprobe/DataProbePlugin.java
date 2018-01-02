@@ -182,12 +182,17 @@ public class DataProbePlugin implements BigDataViewerPlugin,
 
 		ra.setPosition(position);
 		String value;
-		try {
-			value = "" + ra.get().toString();
-		} catch (Exception ex) {
-			value = "NaN";
-			ex.printStackTrace();
+		if (ra != null && ra.get() != null) {
+			try {
+				value = "" + ra.get().toString();
+			} catch (Exception ex) {
+				value = "NaN";
+				ex.printStackTrace();
+			}
+		} else {
+			value = null;
 		}
+
 
 		for (int i = 0; i < outputLabel.size(); i++) {
 			System.out.println(value);
