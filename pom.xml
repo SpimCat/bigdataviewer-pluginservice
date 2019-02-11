@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>19.0.0</version>
+		<version>25.0.0</version>
 		<relativePath />
 	</parent>
 
 	<groupId>de.mpicbg.rhaase</groupId>
 	<artifactId>bigdataviewer-pluginservice</artifactId>
-	<version>0.2.3</version>
+	<version>0.3.0</version>
 
 	<name>bigdataviewer-pluginservice</name>
 	<description>A plugin mechanism / server for BigDataViewer</description>
