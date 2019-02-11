@@ -265,7 +265,10 @@ public class ImgLib2Utils
 	 */
 	@Deprecated
 	public static <T extends RealType<T>> Img<UnsignedShortType> convertToUnsignedShort(Img<T> input) {
-		final ImagePlusImg<UnsignedShortType, ?> output = new ImagePlusImgFactory<UnsignedShortType>().create(input, new UnsignedShortType());
+		//final ImagePlusImg<UnsignedShortType, ?> output = new ImagePlusImgFactory<UnsignedShortType>().create(input, new UnsignedShortType());
+		long[] dimensions = new long[input.numDimensions()];
+		input.dimensions(dimensions);
+		Img<UnsignedShortType> output = ArrayImgs.unsignedShorts(dimensions);
 
 		final Cursor<T> in = input.cursor();
 		final Cursor<UnsignedShortType> out = output.cursor();
